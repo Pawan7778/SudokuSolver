@@ -1,0 +1,156 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+#container {
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  font-size: 2em;
+  margin: 0 auto;
+}
+colgroup,
+tbody {
+  border: solid medium;
+}
+td {
+  border: solid thin;
+  height: 1.4em;
+  width: 1.4em;
+  text-align: center;
+  padding: 0;
+}
+button {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+.padd {
+  padding-bottom: 100px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#sudoku-rules-container {
+  margin-right: 20px; 
+}
+
+#sudoku-rules-container ol {
+  list-style: none;
+} */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 180px;
+}
+
+#container {
+  margin-left: 400px;
+}
+
+#sudoku-rules-container {
+  width: auto;
+  margin-right: 200px;
+  margin-left: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.padd {
+  text-align: center;
+  font-size: 8rem;
+}
+
+#sudoku-rules-container h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#sudoku-rules-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#sudoku-rules-container ol {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#sudoku-board {
+  width: 800px;
+  height: 800px;
+  border-collapse: collapse;
+}
+
+#sudoku-board td {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #cccccc;
+  font-size: 40px;
+  border: solid black 2px;
+  background-color: darkgray;
+}
+
+#solve-button,
+#clear-button {
+  margin-top: 10px;
+  padding: 18px 40px;
+  font-size: 25px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#solve-button:hover,
+#clear-button:hover {
+  background-color: #45a049;
+}
+
+#sudoku-solver-heading {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+#sudoku-rules-container p {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+#sudoku-rules ol li {
+  font-size: 35px;
+}
+#Both {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}

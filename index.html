@@ -1,59 +1,162 @@
 <html>
+
 <head>
   <title></title>
   <script type="text/javascript" src="sudoku.js"></script>
-  <script type="text/javascript" src="analytics.js"></script>
-  <style type="text/css">
-
-    body { font-family: Calibri, sans-serif; }
-    #container { text-align: center }
-    table { border-collapse: collapse; font-size: 2em; margin: 0 auto; }
-    colgroup, tbody { border: solid medium; }
-    td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
-    button { margin-top: 15px; font-size: 1.5em; }
-    
-    padd{padding-bottom: 100px;}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-    
-  <div id="container">
-    
 
-    <h1 class = "padd">Sudoku Solver</h1>
 
-    <table id="sudoku-board">
-      
-      
-      <colgroup><col><col><col>
-      <colgroup><col><col><col>
-      <colgroup><col><col><col>
-      <tbody>
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>     
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-      <tbody>
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>     
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-      <tbody>
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>     
-       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-    </table>
-    <div>
-      <button id="solve-button">Solve!</button>
+  <h1 class="padd">Sudoku Solver</h1>
+  <section class="main">
+
+    <div id="container">
+
+      <table id="sudoku-board">
+
+
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            <tbody>
+          <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true" style="background-color: white;"></td>
+            <td contenteditable="true" style="background-color: white;"></td>
+            <td contenteditable="true" style="background-color: white;"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        <tr>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true" style="background-color: white;"></td>
+          <td contenteditable="true" style="background-color: white;"></td>
+          <td contenteditable="true" style="background-color: white;"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+        <tr>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true" style="background-color: white;"></td>
+          <td contenteditable="true" style="background-color: white;"></td>
+          <td contenteditable="true" style="background-color: white;"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <tbody>
+            <tr>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+            <tr>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+            <tr>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+          <tbody>
+            <tr>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+            <tr>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+            <tr>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true" style="background-color: white;"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+              <td contenteditable="true"></td>
+      </table>
+      <div id="Both">
+        <div>
+          <button id="solve-button">Solve!</button>
+        </div>
+        <div>
+          <button id="clear-button">Clear board</button>
+        </div>
+      </div>
     </div>
-    <div>
-      <button id="clear-button">Clear board</button>
+    <div id="sudoku-rules-container">
+      <div id="project-description">
+        <h2>Project Description:</h2>
+        <p>Welcome to my Sudoku Solver project! This application is designed to solve Sudoku puzzles automatically.
+          Simply enter the initial numbers into the Sudoku board and click the "Solve!" button to see the solution.</p>
+        <p>The solver uses a backtracking algorithm to explore all possible number combinations and find the correct
+          solution. It starts by examining each empty cell and tries different numbers that comply with the Sudoku
+          rules. If a number leads to a conflict, it backtracks and tries the next number until a valid solution is
+          found.</p>
+      </div>
+      <div id="sudoku-rules">
+        <h2>Sudoku Rules:</h2>
+        <ol>
+          <li>Each row must contain the numbers 1-9 with no repetitions.</li>
+          <li>Each column must contain the numbers 1-9 with no repetitions.</li>
+          <li>Each 3x3 box must contain the numbers 1-9 with no repetitions.</li>
+        </ol>
+      </div>
     </div>
-  </div>
+  </section>
 </body>
 
 <script type="text/javascript">
-  document.getElementById("sudoku-board").addEventListener("keyup", function(event) {
-    if(event.target && event.target.nodeName == "TD") {
+  document.getElementById("sudoku-board").addEventListener("keyup", function (event) {
+    if (event.target && event.target.nodeName == "TD") {
       var validNum = /[1-9]/;
       var tdEl = event.target;
       if (tdEl.innerText.length > 0 && validNum.test(tdEl.innerText[0])) {
@@ -64,7 +167,7 @@
     }
   });
 
-  document.getElementById("solve-button").addEventListener("click", function(event) {
+  document.getElementById("solve-button").addEventListener("click", function (event) {
     var boardString = boardToString();
     var solution = SudokuSolver.solve(boardString);
     if (solution) {
@@ -110,4 +213,5 @@
     }
   }
 </script>
+
 </html>
