@@ -1,8 +1,4 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* 
 body {
   font-family: sans-serif;
   text-align: center;
@@ -48,6 +44,11 @@ button {
 #sudoku-rules-container ol {
   list-style: none;
 } */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -58,24 +59,25 @@ body {
 .main {
   display: flex;
   justify-content: space-between;
-  margin-top: 180px;
+  margin-top: 60px;
 }
 
 #container {
-  margin-left: 400px;
+  margin-left: 100px;
 }
 
 #sudoku-rules-container {
+  height: auto;
   width: auto;
-  margin-right: 200px;
-  margin-left: 300px;
+  margin-right: 70px;
+  margin-left: 30px;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .padd {
   text-align: center;
-  font-size: 8rem;
+  font-size: 4rem;
 }
 
 #sudoku-rules-container h3 {
@@ -96,14 +98,14 @@ body {
 }
 
 #sudoku-board {
-  width: 800px;
-  height: 800px;
+  width: 400px;
+  height: 400px;
   border-collapse: collapse;
 }
 
 #sudoku-board td {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   vertical-align: middle;
   border: 1px solid #cccccc;
@@ -115,8 +117,8 @@ body {
 #solve-button,
 #clear-button {
   margin-top: 10px;
-  padding: 18px 40px;
-  font-size: 25px;
+  padding: 8px 10px;
+  font-size: 15px;
   background-color: #4caf50;
   color: #ffffff;
   border: none;
@@ -137,20 +139,21 @@ body {
 }
 
 #sudoku-rules-container p {
-  font-size: 35px;
+  font-size: 20px;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #sudoku-rules ol li {
-  font-size: 35px;
+  font-size: 20px;
 }
 #Both {
   display: flex;
   justify-content: space-between;
   margin: 20px;
+  margin-top: 2px;
   margin-left: 30px;
   margin-right: 30px;
 }
